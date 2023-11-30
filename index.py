@@ -4,10 +4,6 @@ from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import time
 from datetime import datetime
-import requests
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
 import pandas as pd
 
 login_url = 'https://www.marketwatch.com/client/login'

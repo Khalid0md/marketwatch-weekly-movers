@@ -34,6 +34,6 @@ jobs:
         with:
           command: install -d # Install all dependencies, including development ones
       - name: Run script
-        run: python3 index.py
+        run: pipenv run python3 index.py
         timeout-minutes: 10
     
