@@ -124,7 +124,7 @@ merged = compare(lastWeek, thisWeek)
 merged = merged.drop(columns=["Last-last", "Trades-last", "Total Returns-last", "Last-this", "Trades-this", "Total Returns-this"])
 print("-----------------------merged--------------------\n", merged)
 merged.to_csv(f"weeklyMovers/weeklyMovers-{currentDate}.csv", index=False)
-thisWeek.to_csv("lastWeek.csv", index=False)
+thisWeek.to_csv("lastWeek1.csv", index=False)
 
 
 
