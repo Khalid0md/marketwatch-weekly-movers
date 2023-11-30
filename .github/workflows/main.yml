@@ -29,7 +29,11 @@ jobs:
           fetch-depth: 0
           persist-credentials: false
     # Inits repo and runs script
+      - name: Install dependencies
+        uses: VaultVulp/action-pipenv@v2.0.1
+        with:
+        command: install -d # Install all dependencies, including development ones
       - name: Run script
-        run: pipenv install && python3 index.py
+        run: python3 index.py
         timeout-minutes: 10
     
