@@ -33,7 +33,12 @@ jobs:
         uses: VaultVulp/action-pipenv@v2.0.1
         with:
           command: install -d # Install all dependencies, including development ones
+      # - name: Run script
+      #   run: pipenv run python3 index.py
+      #   timeout-minutes: 10
       - name: Run script
-        run: pipenv run python3 index.py
+        uses: VaultVulp/action-pipenv@v2.0.1
+        with:
+          command: run python3 index.py # Install all dependencies, including development ones
         timeout-minutes: 10
     
