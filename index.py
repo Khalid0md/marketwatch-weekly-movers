@@ -120,9 +120,9 @@ print("-----------------------thisWeek--------------------\n", thisWeek)
 lastWeek = pd.read_csv("lastWeek.csv")
 print("-----------------------LastWeek--------------------\n", lastWeek)
 merged = compare(lastWeek, thisWeek)
-print("-----------------------merged--------------------\n", merged)
 #drop unnecessary fields from the merged df
 merged = merged.drop(columns=["Last-last", "Trades-last", "Total Returns-last", "Last-this", "Trades-this", "Total Returns-this"])
+print("-----------------------merged--------------------\n", merged)
 merged.to_csv(f"weeklyMovers/weeklyMovers-{currentDate}.csv", index=False)
 thisWeek.to_csv("lastWeek.csv", index=False)
 
